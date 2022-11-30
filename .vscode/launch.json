@@ -1,0 +1,10 @@
+{
+    "configurations": [
+    {
+        "command": "npm run part1 -w w*/*15",
+        "name": "Run npm start",
+        "request": "launch",
+        "type": "node-terminal"
+    }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "util",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "test:ci": "exit 0",
+    "part1": "echo \"No runnable method in util\" && exit 0",
+    "part2": "echo \"No runnable method in util\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cah-stephen-smith/advent-of-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cah-stephen-smith/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/cah-stephen-smith/advent-of-code#readme"
+}

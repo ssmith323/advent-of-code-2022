@@ -1,0 +1,34 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Advent of Code for 2021. Done with JS",
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "scripts": {
+    "postinstall": "link-module-alias",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint workspaces/**/src/*.js",
+    "start": "node index.js",
+    "format": "prettier --write ./output.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cah-stephen-smith/advent-of-code.git"
+  },
+  "author": "Stephen J Smith <ssmith323@gmail.com> (http://stephenjsmith.info)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cah-stephen-smith/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/cah-stephen-smith/advent-of-code#readme",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "jest": "^27.4.3",
+    "link-module-alias": "^1.2.0",
+    "prettier": "^2.5.0"
+  },
+  "_moduleAliases": {
+    "@util": "workspaces/util/src"
+  }
+}
