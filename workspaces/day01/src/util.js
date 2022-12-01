@@ -1,7 +1,7 @@
 const getCalForElves = (input) => {
   const elves = [];
   let cal = 0;
-  input.forEach((i) => {
+  [...input, ''].forEach((i) => {
     if (i === '') {
       elves.push(cal);
       cal = 0;
