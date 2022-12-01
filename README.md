@@ -1,9 +1,11 @@
 # [Advent of Code 2022](https://adventofcode.com/2022)
+
 [![Tests](https://github.com/ssmith323/advent-of-code-2022/actions/workflows/test.yml/badge.svg)](https://github.com/ssmith323/advent-of-code-2022/actions/workflows/test.yml)
 [![Lint](https://github.com/ssmith323/advent-of-code-2022/actions/workflows/lint.yml/badge.svg)](https://github.com/ssmith323/advent-of-code-2022/actions/workflows/lint.yml)
 
 ## Days
-[![Day](https://badgen.net/badge/01/%E2%98%86%E2%98%86/gray)](workspaces/day01)
+
+[![Day](https://badgen.net/badge/01/%E2%98%86%E2%98%86/green)](workspaces/day01)
 [![Day](https://badgen.net/badge/02/%E2%98%86%E2%98%86/gray)](workspaces/day02)
 [![Day](https://badgen.net/badge/03/%E2%98%86%E2%98%86/gray)](workspaces/day03)
 [![Day](https://badgen.net/badge/04/%E2%98%86%E2%98%86/gray)](workspaces/day04)
@@ -30,41 +32,50 @@
 [![Day](https://badgen.net/badge/25/%E2%98%86%E2%98%86/gray)](workspaces/day25)
 
 ## Dependencies
+
 * [jest](#jest)
 * [eslint](#eslint)
 * [prettier](#prettier)
 
 ### Jest
+
 Used for testing each part indivuidally. No unittesting is being done here.
 https://jestjs.io/
 
 ### Eslint
+
 This is making sure all code is fully very strict standards.
 https://eslint.org/
 
 ### Prettier
+
 Keep the code formating correctly.
 https://prettier.io/
 
 ### Root Tasks
+
 * lint
-  * Lint the whole project
+    * Lint the whole project
 * start
-  * Creates a file with timing on the different solutions
+    * Creates a file with timing on the different solutions
 
 `npm run {task}`
 
 ### Workspaces
+
 Ever workspaces has the same 3 tasks.
+
 * `test`
-  * Will run all test for the workspace
+    * Will run all test for the workspace
 * `part1`
-  * Will run only part one of the day
+    * Will run only part one of the day
 * `part2`
-  * Will run only part two of the day
+    * Will run only part two of the day
 
 You can run this by doing `npm run {task} -w w*/*{day}`
-  
+
 ## Description
-This is for 2022 Advent of code. This is done using Vanilla JS. All dependencies being used is for code quality and testing. 
+
+This is for 2022 Advent of code. This is done using Vanilla JS. All dependencies being used is for code quality and
+testing. 
 

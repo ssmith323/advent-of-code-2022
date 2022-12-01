@@ -8,6 +8,7 @@
         "jest": true
     },
     "rules": {
+        "semi": "error",
         "arrow-parens": "error",
         "camelcase": "error",
         "arrow-spacing": "error",
