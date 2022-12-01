@@ -6,7 +6,7 @@
     "workspaces/*"
   ],
   "scripts": {
-    "preinstall": "command -v link-module-alias && link-module-alias clean || true",
+    "preinstall": "which link-module-alias && link-module-alias clean || echo",
     "postinstall": "link-module-alias",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint workspaces/**/src/*.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cah-stephen-smith/advent-of-code.git"
+    "url": "git+https://github.com/ssmith323/advent-of-code-2022.git"
   },
   "author": "Stephen J Smith <ssmith323@gmail.com> (http://stephenjsmith.info)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cah-stephen-smith/advent-of-code/issues"
+    "url": "https://github.com/ssmith323/advent-of-code-2022/issues"
   },
-  "homepage": "https://github.com/cah-stephen-smith/advent-of-code#readme",
+  "homepage": "https://github.com/ssmith323/advent-of-code-2022#readme",
   "devDependencies": {
     "eslint": "^8.3.0",
     "jest": "^27.4.3",
