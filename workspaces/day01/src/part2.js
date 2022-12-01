@@ -1,4 +1,4 @@
-const { getCommands } = require('@util/files.js');
+const { getCommands } = require('@util/file.js');
 const { getCalForElves } = require('./util');
 
 const part2 = (filename) => {
