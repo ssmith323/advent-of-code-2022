@@ -14,7 +14,7 @@ const getTestResults = (result) => {
   let retValue = {};
   for (let i = 0; i < arr.length; i += 5) {
     const filename = arr[i].split('\n')[1].trim();
-    if (filename != '' && !filename.includes('--')) {
+    if (filename !== '' && !filename.includes('--')) {
       retValue = {
         ...retValue,
         [filename]: {
@@ -28,8 +28,9 @@ const getTestResults = (result) => {
   }
   return retValue;
 };
-
-for (let i = 1; i < 2; i++) {
+const todayDate = new Date().getDate();
+const runUntil = todayDate < 26 ? todayDate : 25;
+for (let i = 1; i <= runUntil; i++) {
   const day = i > 10 ? i : `0${i}`;
   const start1 = Date.now();
   execSync(`npm run part1 -w w*/d*${day}`);
