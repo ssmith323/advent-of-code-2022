@@ -9,7 +9,7 @@ const part2 = (filename) => {
     .map((i) => {
       const plays = i.split(' ');
       const yourThrow = getYourThrow(plays[1], plays[0]);
-      return play(POINTS[yourThrow], POINTS[plays[0]]) + POINTS[yourThrow];
+      return play(yourThrow, POINTS[plays[0]]) + yourThrow;
     })
     .sum();
 };

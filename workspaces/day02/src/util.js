@@ -1,28 +1,17 @@
-const OUTCOME = {
-  WIN: 6,
-  DRAW: 3,
-  LOST: 0,
-};
-
-const THROWS = {
-  ROCK: 1,
-  PAPER: 2,
-  SCISSORS: 3,
-};
-
-const POINTS = {
-  A: THROWS.ROCK,
-  B: THROWS.PAPER,
-  C: THROWS.SCISSORS,
-  X: THROWS.ROCK,
-  Y: THROWS.PAPER,
-  Z: THROWS.SCISSORS,
-};
+const {
+  OUTCOME,
+  TO_WINNING,
+  TO_LOSING,
+  POINTS,
+  THROWS,
+} = require('./constant.js');
 
 const play = (playerMove, opponentMove) => {
   if (opponentMove === playerMove) {
     return OUTCOME.DRAW;
-  } else if (
+  }
+
+  if (
     (playerMove === THROWS.ROCK && opponentMove === THROWS.SCISSORS) ||
     (playerMove === THROWS.PAPER && opponentMove === THROWS.ROCK) ||
     (playerMove === THROWS.SCISSORS && opponentMove === THROWS.PAPER)
@@ -34,19 +23,11 @@ const play = (playerMove, opponentMove) => {
 
 const getYourThrow = (neededResult, opponentMove) => {
   if (neededResult === 'X') {
-    return (
-      (opponentMove === 'A' && 'C') ||
-      (opponentMove === 'B' && 'A') ||
-      (opponentMove === 'C' && 'B')
-    );
+    return TO_LOSING[opponentMove];
   } else if (neededResult === 'Y') {
-    return opponentMove;
+    return POINTS[opponentMove];
   }
-  return (
-    (opponentMove === 'A' && 'B') ||
-    (opponentMove === 'B' && 'C') ||
-    (opponentMove === 'C' && 'A')
-  );
+  return TO_WINNING[opponentMove];
 };
 
-module.exports = { getYourThrow, play, POINTS, THROWS };
+module.exports = { getYourThrow, play, POINTS };
