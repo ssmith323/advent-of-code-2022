@@ -29,15 +29,16 @@ const getTestResults = (result) => {
   return retValue;
 };
 
-for (let i = 1; i < 10; i++) {
+for (let i = 1; i < 2; i++) {
+  const day = i > 10 ? i : `0${i}`;
   const start1 = Date.now();
-  execSync(`npm run part1 -w w*/*${i}`);
+  execSync(`npm run part1 -w w*/d*${day}`);
   const end1 = Date.now();
   const start2 = Date.now();
-  execSync(`npm run part2 -w w*/*${i}`);
+  execSync(`npm run part2 -w w*/*${day}`);
   const end2 = Date.now();
 
-  const result = execSync(`npm run test:ci -w w*/*${i}`).toString();
+  const result = execSync(`npm run test:ci -w w*/*${day}`).toString();
 
   output.days[i] = {
     part1: getSeconds(start1, end1),
