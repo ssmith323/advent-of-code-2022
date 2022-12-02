@@ -1,3 +1,3 @@
-const part1 = (name) => {
-};
+const part1 = (name) => {};
+
 module.exports = { part1 };

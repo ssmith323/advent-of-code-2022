@@ -1,22 +1,11 @@
 {
-    "name": "day13",
-    "version": "1.0.0",
-    "devDependencies": {},
-    "scripts": {
-      "test": "jest",
-      "test:ci": " jest --coverage",
-      "part1": "node index1.js",
-      "part2": "node index2.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/cah-stephen-smith/advent-of-code.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/cah-stephen-smith/advent-of-code/issues"
-    },
-    "homepage": "https://github.com/cah-stephen-smith/advent-of-code#readme"
+  "name": "day13",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "test:ci": " jest --coverage",
+    "part1": "node index1.js",
+    "part2": "node index2.js"
   }
+}
   
