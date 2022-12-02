@@ -1,24 +1,15 @@
-const {
-  OUTCOME,
-  TO_WINNING,
-  TO_LOSING,
-  POINTS,
-  THROWS,
-} = require('./constant.js');
+const { OUTCOME, TO_WINNING, TO_LOSING, POINTS } = require('./constant.js');
 
 const play = (playerMove, opponentMove) => {
-  if (opponentMove === playerMove) {
-    return OUTCOME.DRAW;
+  const outcome = Math.abs(playerMove - opponentMove - 2) % 3;
+  switch (outcome) {
+    case 2:
+      return OUTCOME.DRAW;
+    case 1:
+      return OUTCOME.WIN;
+    default:
+      return OUTCOME.LOST;
   }
-
-  if (
-    (playerMove === THROWS.ROCK && opponentMove === THROWS.SCISSORS) ||
-    (playerMove === THROWS.PAPER && opponentMove === THROWS.ROCK) ||
-    (playerMove === THROWS.SCISSORS && opponentMove === THROWS.PAPER)
-  ) {
-    return OUTCOME.WIN;
-  }
-  return OUTCOME.LOST;
 };
 
 const getYourThrow = (neededResult, opponentMove) => {
