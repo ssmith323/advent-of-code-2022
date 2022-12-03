@@ -13,12 +13,12 @@ const play = (playerMove, opponentMove) => {
 };
 
 const getYourThrow = (neededResult, opponentMove) => {
-  if (neededResult === 'X') {
-    return TO_LOSING[opponentMove];
-  } else if (neededResult === 'Y') {
+  if (neededResult === 'Y') {
     return POINTS[opponentMove];
   }
-  return TO_WINNING[opponentMove];
+  return neededResult === 'Z'
+    ? TO_WINNING[opponentMove]
+    : TO_LOSING[opponentMove];
 };
 
 module.exports = { getYourThrow, play, POINTS };
