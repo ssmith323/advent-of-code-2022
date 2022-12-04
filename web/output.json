@@ -1,9 +1,9 @@
 {
-  "meta": { "today": "2022-12-03T13:34:54.159Z" },
+  "meta": { "today": "2022-12-04T13:51:34.375Z" },
   "days": {
     "1": {
-      "part1": "0.589 seconds",
-      "part2": "0.225 seconds",
+      "part1": "0.246 seconds",
+      "part2": "0.224 seconds",
       "tests": {
         "All files": {
           "statement": 100,
@@ -32,8 +32,8 @@
       }
     },
     "2": {
-      "part1": "0.216 seconds",
-      "part2": "0.222 seconds",
+      "part1": "0.23 seconds",
+      "part2": "0.223 seconds",
       "tests": {
         "All files": {
           "statement": 100,
@@ -68,8 +68,8 @@
       }
     },
     "3": {
-      "part1": "0.481 seconds",
-      "part2": "0.21 seconds",
+      "part1": "0.274 seconds",
+      "part2": "0.226 seconds",
       "tests": {
         "All files": {
           "statement": 100,
@@ -78,6 +78,36 @@
           "lines": 100
         },
         "letters.js": {
+          "statement": 100,
+          "branch": 100,
+          "functions": 100,
+          "lines": 100
+        },
+        "part1.js": {
+          "statement": 100,
+          "branch": 100,
+          "functions": 100,
+          "lines": 100
+        },
+        "part2.js": {
+          "statement": 100,
+          "branch": 100,
+          "functions": 100,
+          "lines": 100
+        },
+        "util.js": {
+          "statement": 100,
+          "branch": 100,
+          "functions": 100,
+          "lines": 100
+        }
+      }
+    },
+    "4": {
+      "part1": "0.238 seconds",
+      "part2": "0.24 seconds",
+      "tests": {
+        "All files": {
           "statement": 100,
           "branch": 100,
           "functions": 100,

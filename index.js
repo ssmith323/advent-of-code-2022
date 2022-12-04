@@ -48,5 +48,5 @@ for (let i = 1; i <= runUntil; i++) {
   };
 }
 
-writeFileSync('output.json', JSON.stringify(output));
+writeFileSync('web/output.json', JSON.stringify(output));
 execSync('npm run format');
