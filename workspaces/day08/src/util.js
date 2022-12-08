@@ -6,10 +6,13 @@ const getMap = (name) =>
     .split('\n')
     .map((r) => r.split('').map(Number));
 
-const getVisibleTrees = (map) => {
-  const visibleTrees = Array(map.length)
+const getStartingArray = (map) =>
+  Array(map.length)
     .fill()
-    .map(() => Array(map[0].length).fill(-1));
+    .map(() => Array(map[0].length).fill(0));
+
+const getVisibleTrees = (map) => {
+  const visibleTrees = getStartingArray(map);
   visibleTrees[0] = visibleTrees[0].fill(1);
   visibleTrees[visibleTrees.length - 1] =
     visibleTrees[visibleTrees.length - 1].fill(1);
@@ -21,4 +24,4 @@ const getVisibleTrees = (map) => {
   return visibleTrees;
 };
 
-module.exports = { getVisibleTrees, getMap };
+module.exports = { getStartingArray, getVisibleTrees, getMap };

@@ -1,3 +1,7 @@
+/* eslint-disable max-lines */
+const isOnEdge = (map, [x, y]) =>
+  x === 0 || x === map.length - 1 || y === 0 || y === map[x].length - 1;
+
 const getLeftTrees = (map, [x, y]) => {
   let visibleTrees = 0;
   for (let i = x - 1; i >= 0; i--) {
@@ -42,4 +46,10 @@ const getDownTrees = (map, [x, y]) => {
   return visibleTrees;
 };
 
-module.exports = { getDownTrees, getRightTrees, getTopTrees, getLeftTrees };
+module.exports = {
+  getDownTrees,
+  getRightTrees,
+  getTopTrees,
+  getLeftTrees,
+  isOnEdge,
+};
