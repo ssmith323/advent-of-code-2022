@@ -15,9 +15,7 @@ const getVisibleTrees = (map) => {
     visibleTrees[visibleTrees.length - 1].fill(1);
   for (let i = 0; i < map.length; i++) {
     for (let j = 0; j < map[0].length; j++) {
-      if (visibleTrees[i][j] === -1) {
-        visibleTrees[i][j] = check(map, [i, j]);
-      }
+      visibleTrees[i][j] = check(map, [i, j]);
     }
   }
   return visibleTrees;
