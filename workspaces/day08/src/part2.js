@@ -1,4 +1,10 @@
 const { getMap } = require('./util');
+const {
+  getLeftTrees,
+  getRightTrees,
+  getTopTrees,
+  getDownTrees,
+} = require('./util2');
 require('@util/array.js');
 
 const part2 = (name) => {
@@ -16,38 +22,12 @@ const part2 = (name) => {
       ) {
         visibleTrees[i][j] = 0;
       }
-      let leftTrees = 0;
-      for (let left = i - 1; left >= 0; left--) {
-        leftTrees++;
-        if (map[i][j] <= map[left][j]) {
-          break;
-        }
-      }
-      let rightTrees = 0;
-      for (let right = i + 1; right < map.length; right++) {
-        rightTrees++;
-        if (map[i][j] <= map[right][j]) {
-          break;
-        }
-      }
 
-      let topTrees = 0;
-      for (let top = j + 1; top < map[i].length; top++) {
-        topTrees++;
-        if (map[i][j] <= map[i][top]) {
-          break;
-        }
-      }
-
-      let downTrees = 0;
-      for (let down = j - 1; down >= 0; down--) {
-        downTrees++;
-        if (map[i][j] <= map[i][down]) {
-          break;
-        }
-      }
-
-      visibleTrees[i][j] = leftTrees * rightTrees * topTrees * downTrees;
+      visibleTrees[i][j] =
+        getLeftTrees(map, [i, j]) *
+        getRightTrees(map, [i, j]) *
+        getTopTrees(map, [i, j]) *
+        getDownTrees(map, [i, j]);
     }
   }
   return visibleTrees.flat().max();
